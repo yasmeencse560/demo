@@ -1,0 +1,72 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Registration Form</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background: red;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+    form {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: blue;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>  
+</head>
+<body bgcolor="red">
+  <form action="/abc/login.html" method="post">
+    <h2>Event Registration</h2>
+    
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" 
+pattern="[A-Z][a-z]+" placeholder="enter ur full name" required><br>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone"
+pattern = "[7-9][0-9]{9}" maxlength="10" 
+minlength ="10" required><br>
+
+    <label for="event">Choose Event</label>
+    <select id="event" name="event" required>
+      <option value="">--please select--</option>
+      <option value="coding">Coding Contest</option>
+      <option value="debate">Debate</option>
+      <option value="music">Music Show</option>
+    </select><br>
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
